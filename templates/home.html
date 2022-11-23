@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>주간보고 요약기</title>
+        </head>
+        <body>
+            <h1>주간보고 요약기</h1>
+            <!--<h2>Please Try, url+ chat?prompt=contents</h2>-->
+            <h3>OpenAI의 GPT3.5 모델을 사용한 주간보고 요약기입니다. 
+            입력란에 주간보고 내용을 입력하고, 요약버튼을 눌러주세요.</h3>
+            <form  action="/summary">
+                <textarea name="prompt" rows="5" cols="50"></textarea>
+                <div></div>
+                 <label for="writer">작성자:</label><br>
+                <input name="writer" type="text" id="writer" name="writer"><br>
+                <label for="date">날짜:</label><br>
+                <input name="date" type="text" id="date" name="date"><br><br>
+                <input type="submit" value="요약">
+            </form>
+        </body>
+        </html>
+        """
