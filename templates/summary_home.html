@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>ChatGPT Summary</title>
+            
+            <!-- Font 추가 -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Acme&family=Monomaniac+One&family=Patua+One&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <p data-ke-size="size30" style="text-align:center; font-size:30px;">
+            <span style=
+                "border-radius: 20px 15px 15px 0;
+                padding: 0.5em;
+                font-weight: bold;
+                font-family: 'Monomaniac One', sans-serif;">ChatGPT's Smart Summary</span></p>
+            
+           <div class="parent"
+                style="
+                text-align:center;
+                border-radius: 5em; padding: 0.5em;
+                font-size:25px;
+                font-family: 'Gamja Flower', cursive;
+                font-weight: bold; text-align:center;
+                width:700px;
+                margin:0 auto; 
+                data-ke-size="size16">
+            
+                <div class="text" style="padding: 0.5em; margin:1em">
+                    "OpenAI의 Text-davinci-3 모델을 사용한 주간보고 요약기입니다.<br>
+                    회의록을 입력하고, 요약 버튼을 눌러주세요."</div>
+                    
+                <form action="/summary_result">
+                    <label for="writer">작성자:</label>
+                    <input name="writer" type="text" id="writer" name="writer"><br>
+                    <label for="date">날짜:</label>
+                    <input name="date" type="text" id="date" name="date"><br>
+                    <div class="summary">
+                        <textarea name="prompt" style="background:#F1F8E0; border-radius: 1em;
+                        padding: 0.5em; margin:1em; width:700px; height:150px"></textarea>
+                    </div>
+                    <input type="submit" value="요약">
+                </form>
+                
+                <form action="/test_home">
+                    <div class="summary" style="background:#FFCC33; border-radius: 5em; padding: 0.5em; margin:1em">
+                        <input type="submit" value="Sub Test Case 생성하기" style="background:#FFCC33;
+                        font-size:25px; font-family: 'Gamja Flower', cursive; font-weight: bold;
+                        border:0 solid black; text-align:center;">
+                    </div>
+                </form>
+            </div>
+        </body>
+        </html>

@@ -2,14 +2,87 @@
         <html>
         <head>
             <meta charset="UTF-8">
-            <title>주간보고 요약기</title>
+            <title>PMS ChatGPT Assist</title>
+            
+            <!-- Font 추가 -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Acme&family=Monomaniac+One&family=Patua+One&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
         </head>
+        
         <body>
-            <h1>주간보고 요약기</h1>
-            <!--<h2>Please Try, url+ chat?prompt=contents</h2>-->
-            <h3>OpenAI의 GPT3.5 모델을 사용한 주간보고 요약기입니다. 
-            입력란에 주간보고 내용을 입력하고, 요약버튼을 눌러주세요.</h3>
-            <form  action="/summary">
+            
+            <p data-ke-size="size30" style="text-align:center; font-size:30px;">
+            <span style=
+                "border-radius: 20px 15px 15px 0;
+                padding: 0.5em;
+                font-weight: bold;
+                font-family: 'Monomaniac One', sans-serif;">PMS-ChatGPT Assist</span></p>
+            
+            <div class="parent"
+                style="
+                text-align:center;
+                border-radius: 5em; padding: 0.5em;
+                font-size:25px;
+                font-family: 'Gamja Flower', cursive;
+                font-weight: bold; text-align:center;
+                width:700px;
+                margin:0 auto; 
+                data-ke-size="size16">
+            
+                <div class="text" style="padding: 0.5em; margin:1em">
+                "OpenAI의 Text-davinci-3 모델을 사용한 PMS ChatGPT Assist"</div>
+                
+                <div class="pms" style="background:#FF6666; border-radius: 5em; padding: 0.5em; margin:1em">
+                <a href="http://211.184.190.16:8080/login_new.jsp">KT PMS 바로가기</a>
+                </div>
+                
+                <form action="/summary_home">
+                    <div class="summary" style="background:#FFCC33; border-radius: 5em; padding: 0.5em; margin:1em">
+                        <input type="submit" value="회의 요약하기" style="background:#FFCC33;
+                        font-size:25px; font-family: 'Gamja Flower', cursive; font-weight: bold;
+                        border:0 solid black; text-align:center;">
+                    </div>
+                </form>
+                
+                <form action="/issue_home">
+                    <div class="summary" style="background:#FFCC33; border-radius: 5em; padding: 0.5em; margin:1em">
+                        <input type="submit" value="Issue Risk 추출하기" style="background:#FFCC33;
+                        font-size:25px; font-family: 'Gamja Flower', cursive; font-weight: bold;
+                        border:0 solid black; text-align:center;">
+                    </div>
+                </form>
+                
+                <form action="/test_home">
+                    <div class="summary" style="background:#FFCC33; border-radius: 5em; padding: 0.5em; margin:1em">
+                        <input type="submit" value="Sub Test Case 생성하기" style="background:#FFCC33;
+                        font-size:25px; font-family: 'Gamja Flower', cursive; font-weight: bold;
+                        border:0 solid black; text-align:center;">
+                    </div>
+                </form>
+            </div>    
+            
+            <!-- <p style="border-radius: 5em; padding: 0.5em;
+            font-size:25px;
+            background: #CCCCCC;
+            font-family: 'Gamja Flower', cursive;
+            font-weight: bold; text-align:center;
+            width:700px;"
+            data-ke-size="size16">
+            "OpenAI의 Text-davinci-3 모델을 사용한 PMS ChatGPT Assist"</p>
+            
+            <a href="http://211.184.190.16:8080/login_new.jsp"
+            style="border-radius: 5em; padding: 0.5em;
+            font-size:25px;
+            background: #FF6666;
+            font-family: 'Gamja Flower', cursive;
+            font-weight: bold; text-align:center;
+            background-width:700px;"
+            data-ke-size="size16">
+            KT PMS 바로가기</a>
+            
+            <form  action="/summary_home">
                 <textarea name="prompt" rows="5" cols="50"></textarea>
                 <div></div>
                  <label for="writer">작성자:</label><br>
@@ -17,7 +90,7 @@
                 <label for="date">날짜:</label><br>
                 <input name="date" type="text" id="date" name="date"><br><br>
                 <input type="submit" value="요약">
-            </form>
+            </form> -->
         </body>
         </html>
-        """
+        
