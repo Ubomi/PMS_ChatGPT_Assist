@@ -3,9 +3,58 @@
         <head>
             <meta charset="UTF-8">
             <title>{{title}}</title>
+            
+            <!-- Font 추가 -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Acme&family=Monomaniac+One&family=Patua+One&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
         </head>
-    <h1>{{title}}</h1>
-    <h2>작성자: {{writer}} </h2>
-    <h2> 날짜: {{date}}</h2>
-    <h3>요약된 주간보고입니다.</h3>"
-    <h4>{{summary}}</h4>
+        
+        <body>
+            <p data-ke-size="size30" style="text-align:center; font-size:30px;">
+            <span style=
+                "border-radius: 20px 15px 15px 0;
+                padding: 0.5em;
+                font-weight: bold;
+                font-family: 'Monomaniac One', sans-serif;">{{date}} Report</span></p>
+            
+           <div class="parent"
+                style="
+                text-align:center;
+                border-radius: 5em; padding: 0.5em;
+                font-size:25px;
+                font-family: 'Gamja Flower', cursive;
+                font-weight: bold; text-align:center;
+                width:700px;
+                margin:0 auto; 
+                data-ke-size="size16">
+            
+                <div class="text" style="padding: 0.5em; margin:1em">{{title}}</div>
+                    
+                <form action="/summary_result">
+                    <div style="text-align:left;"><label for="writer"
+                    style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);">
+                    🙉작성자:{{writer}}</label></div><br>
+                    <div class="summary">
+                        <textarea name="prompt" style="background:#F1F8E0; border-radius: 1em;
+                        padding: 0.5em; margin:1em; width:700px; height:200px;
+                        text-align: left;">{{summary}}</textarea>
+                    </div>
+                </form>
+                
+                <div class="pms" style="background:#FF6666; border-radius: 5em; padding: 0.5em; margin:1em">
+                <a href="http://211.184.190.16:8080/login_new.jsp">🚩KT PMS 바로가기</a>
+                </div>
+                
+                <form action="/">
+                    <div class="summary" style="background:#C0C0C0; border-radius: 5em; padding: 0.5em; margin:1em">
+                        <input type="submit" value="🏚️HOME" style="background:#C0C0C0;
+                        font-size:25px; font-family: 'Gamja Flower', cursive; font-weight: bold;
+                        border:0 solid black; text-align:center;">
+                    </div>
+                </form>
+                
+                
+            </div>
+        </body>

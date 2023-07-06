@@ -30,24 +30,27 @@
                 data-ke-size="size16">
             
                 <div class="text" style="padding: 0.5em; margin:1em">
-                    "OpenAI의 Text-davinci-3 모델을 사용한 주간보고 요약기입니다.<br>
-                    회의록을 입력하고, 요약 버튼을 눌러주세요."</div>
+                    OpenAI의 Text-davinci-3 모델을 사용한 주간보고 요약기입니다.<br>
+                    회의록을 입력하고, 요약 버튼을 눌러주세요.</div>
                     
                 <form action="/summary_result">
-                    <label for="writer">작성자:</label>
-                    <input name="writer" type="text" id="writer" name="writer"><br>
-                    <label for="date">날짜:</label>
-                    <input name="date" type="text" id="date" name="date"><br>
+                    <label for="writer"
+                    style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);">🙉작성자:</label>
+                    <input name="writer" type="text" id="writer" name="writer"
+                    style="background:#FAFAD2; border-radius: 0.5em;
+                        padding: 0.5em; margin:1em; width:70px; height:10px"><br>
+                    <label for="date"
+                    style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);">📆날짜:</label>
+                    <input name="date" type="text" id="date" name="date"
+                    style="background:#FAFAD2; border-radius: 0.5em;
+                        padding: 0.5em; margin:1em; width:85px; height:10px"><br>
                     <div class="summary">
                         <textarea name="prompt" style="background:#F1F8E0; border-radius: 1em;
-                        padding: 0.5em; margin:1em; width:700px; height:150px"></textarea>
+                        padding: 0.5em; margin:1em; width:700px; height:150px;
+                        text-align: left;">✒️회의록을 입력해주세요.</textarea>
                     </div>
-                    <input type="submit" value="요약">
-                </form>
-                
-                <form action="/test_home">
                     <div class="summary" style="background:#FFCC33; border-radius: 5em; padding: 0.5em; margin:1em">
-                        <input type="submit" value="Sub Test Case 생성하기" style="background:#FFCC33;
+                        <input type="submit" value="요약하기" style="background:#FFCC33;
                         font-size:25px; font-family: 'Gamja Flower', cursive; font-weight: bold;
                         border:0 solid black; text-align:center;">
                     </div>

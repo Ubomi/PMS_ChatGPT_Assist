@@ -13,7 +13,7 @@ def make_title(prompt):
     response = openai.Completion.create(
         engine="text-davinci-003-pms",
         # prompt="summarize following conten" + prompt
-        prompt="make the title with following content. " + prompt,
+        prompt="다음 내용으로 짧은 제목을 만들어줘. " + prompt,
         temperature=1,
         max_tokens=100,
         top_p=0.5,
