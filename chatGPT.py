@@ -36,7 +36,30 @@ def summarize(prompt):
         # prompt="summarize following conten" + prompt
         prompt="summarize following content. " + prompt,
         temperature=1,
-        max_tokens=100,
+        max_tokens=1000,
+        top_p=0.5,
+        frequency_penalty=0,
+        presence_penalty=0,
+        best_of=1,
+        stop=None)
+    # summary = response.messages[0].text.strip()
+    result = response['choices'][0]['text']
+    # summary = response.choices[0].message.content
+    # print(text)
+    return result
+
+
+def check(prompt, meeting, project):
+    meeting = str(meeting)
+    project = str(project)
+    prompt = str("meeting: ") + meeting + str("Project: ") + \
+        project + str("meeting: ")+prompt
+    response = openai.Completion.create(
+        engine="text-davinci-003-pms",
+        # prompt="summarize following conten" + prompt
+        prompt="Table the following contents with Column(name, Issue/Risk, Contents, Due date)" + prompt,
+        temperature=1,
+        max_tokens=1000,
         top_p=0.5,
         frequency_penalty=0,
         presence_penalty=0,
