@@ -48,6 +48,28 @@ def issue_result():
                            writer=writer, date=date, IRlist=IRlist, title=title)
 
 
+@app.route('/testCase_home', methods=['GET'])
+def testCase_home():
+    return render_template('testCase_home.html')
+
+
+@app.route('/testCase_result', methods=['GET', 'POST'])
+def testCase_result():
+    testTarget = request.args.get('testTarget')
+    testItem = request.args.get('testItem')
+    project = request.args.get('project')
+    writer = request.args.get('writer')
+    date = request.args.get('date')
+    title = chatGPT.make_title("test Item :"+testItem)
+    subTestCase = chatGPT.testMaker(project, testTarget, testItem)
+    return render_template('testCase_result.html',
+                           writer=writer, date=date, subTestCase=subTestCase, title=title)
+
+@app.route('/LR_home', methods=['GET'])
+def LR_home():
+    return render_template('LR_home.html')
+
+
 if __name__ == '__main__':
     app.config['JSON_AS_ASCII'] = False
     app.run(debug=True)

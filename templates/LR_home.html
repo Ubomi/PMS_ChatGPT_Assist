@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>LR scripting</title>
+            
+            <!-- Font 추가 -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Acme&family=Monomaniac+One&family=Patua+One&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <p data-ke-size="size30" style="text-align:center; font-size:30px;">
+            <span style=
+                "border-radius: 20px 15px 15px 0;
+                padding: 0.5em;
+                font-weight: bold;
+                font-family: 'Monomaniac One', sans-serif;">ChatGPT LoadRunner Scripting</span></p>
+            
+           <div class="parent"
+                style="
+                text-align:center;
+                border-radius: 5em; padding: 0.5em;
+                font-size:25px;
+                font-family: 'Gamja Flower', cursive;
+                font-weight: bold; text-align:center;
+                width:700px;
+                margin:0 auto; 
+                data-ke-size="size16">
+            
+                <div class="text" style="padding: 0.5em; margin:1em">
+                    GPT 4.0 모델을 사용한 LoadRunner 스크립트 작성기입니다.<br>
+                    박스에 해당하는 내용을 입력 후, 작성하기 버튼을 눌러주세요.</div>
+                    
+                <form action="/LR_result">
+                    <div align="left">
+                        <label for="transaction"
+                        style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);text-align:left;">⚫TraTsactacon 명: </label>
+                        <input name="transaction" type="text" id="transaction" name="transaction"
+                        style="background:#FAFAD2; border-radius: 0.5em; align:left;
+                            padding: 0.5em; margin:1em; width:700px; height:10px"><br>
+                            
+                        <label for="url"
+                        style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);text-align:left;">⚫목표 URL명: </label>
+                        <input name="url" type="text" id="url" 
+                        style="background:#FAFAD2; border-radius: 0.5em; align:left;
+                            padding: 0.5em; margin:1em; width:700px; height:10px"><br>
+                        
+                        <label for="data"
+                        style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);align:left;">⚫데이터: </label>
+                        <textarea name="data" type="text" id="data"
+                        style="background:#FAFAD2; border-radius: 0.5em; text-align:left;
+                            padding: 0.5em; margin:1em; width:700px; height:50px">
+                            - Content-type: text/plain
+                            - ApiKey: ***
+                            - tenant ID: kt
+                            - Method: post
+                            - Body: Hi Hello Nice to meet u</textarea><br>
+                        
+                        <label for="Pass"
+                        style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%); align:left;">⚫Transactiotion Pass s Fail 방법: </label>
+                        <textarea name="testTarget" type="text" id="testTarget"
+                        style="background:#FAFAD2; border-radius: 0.5em; align:left;
+                            padding: 0.5em; margin:1em; width:700px; height:50px">✒️테스트 대상이 무엇인가요?</textarea><br>
+                            
+                        <label for="testItem"
+                        style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%); align:left;">✔️테스트 항목: </label>
+                        <textarea name="testItem" type="text" id="testItem"
+                        style="background:#FAFAD2; border-radius: 0.5em; align:left;
+                            padding: 0.5em; margin:1em; width:700px; height:50px">✒️테스트 목록을 간략히 작성해주세요.</textarea><br>
+                            
+                    </div>
+                    
+                    <div class="summary" style="background:#FFCC33; border-radius: 5em; padding: 0.5em; margin:1em">
+                        <input type="submit" value="생성하기" style="background:#FFCC33;
+                        font-size:25px; font-family: 'Gamja Flower', cursive; font-weight: bold;
+                        border:0 solid black; text-align:center;">
+                        
+                    </div>
+                </form>
+            </div>
+        </body>
+        </html>
