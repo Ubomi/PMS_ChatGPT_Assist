@@ -39,20 +39,19 @@
                         style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);text-align:left;">⚫TraTsactacon 명: </label>
                         <input name="transaction" type="text" id="transaction" name="transaction"
                         style="background:#FAFAD2; border-radius: 0.5em; align:left;
-                            padding: 0.5em; margin:1em; width:700px; height:10px"><br>
+                            padding: 0.5em; margin:1em; width:700px; height:20px"><br>
                             
                         <label for="url"
                         style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);text-align:left;">⚫목표 URL명: </label>
                         <input name="url" type="text" id="url" 
                         style="background:#FAFAD2; border-radius: 0.5em; align:left;
-                            padding: 0.5em; margin:1em; width:700px; height:10px"><br>
+                            padding: 0.5em; margin:1em; width:700px; height:20px"><br>
                         
                         <label for="data"
                         style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);align:left;">⚫데이터: </label>
                         <textarea name="data" type="text" id="data"
-                        style="background:#FAFAD2; border-radius: 0.5em; text-align:left;
-                            padding: 0.5em; margin:1em; width:700px; height:50px">
-                            - Content-type: text/plain
+                        style="background:#FAFAD2; border-radius: 0.5em; align:left;
+                            padding: 0.5em; margin:1em; width:700px; height:500px">- Content-type: text/plain
                             - ApiKey: ***
                             - tenant ID: kt
                             - Method: post
@@ -60,20 +59,14 @@
                         
                         <label for="Pass"
                         style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%); align:left;">⚫Transactiotion Pass s Fail 방법: </label>
-                        <textarea name="testTarget" type="text" id="testTarget"
+                        <textarea name="pass" type="text" id="pass"
                         style="background:#FAFAD2; border-radius: 0.5em; align:left;
-                            padding: 0.5em; margin:1em; width:700px; height:50px">✒️테스트 대상이 무엇인가요?</textarea><br>
-                            
-                        <label for="testItem"
-                        style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%); align:left;">✔️테스트 항목: </label>
-                        <textarea name="testItem" type="text" id="testItem"
-                        style="background:#FAFAD2; border-radius: 0.5em; align:left;
-                            padding: 0.5em; margin:1em; width:700px; height:50px">✒️테스트 목록을 간략히 작성해주세요.</textarea><br>
+                            padding: 0.5em; margin:1em; width:700px; height:50px">Header에서 http/1.1 200 ok 발견될 시 Pass 처리, 종료는 LR_AUTO로 처리</textarea><br>
                             
                     </div>
                     
                     <div class="summary" style="background:#FFCC33; border-radius: 5em; padding: 0.5em; margin:1em">
-                        <input type="submit" value="생성하기" style="background:#FFCC33;
+                        <input type="submit" value="작성하기" style="background:#FFCC33;
                         font-size:25px; font-family: 'Gamja Flower', cursive; font-weight: bold;
                         border:0 solid black; text-align:center;">
                         
