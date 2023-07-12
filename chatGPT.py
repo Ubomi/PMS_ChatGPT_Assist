@@ -7,7 +7,7 @@ import os
 # openai.api_base = "https://10b2bsi.openai.azure.com/"
 # openai.api_version = "2022-12-01"
 # openai.api_key = "22125b2f48e14c07a59e9c638005d33e"
-openai.api_key = "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"
+openai.api_key = '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'
 
 
 def make_title(prompt):

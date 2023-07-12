@@ -65,9 +65,51 @@ def testCase_result():
     return render_template('testCase_result.html',
                            writer=writer, date=date, subTestCase=subTestCase, title=title)
 
+
 @app.route('/LR_home', methods=['GET'])
 def LR_home():
     return render_template('LR_home.html')
+
+
+@app.route('/LR_result', methods=['GET', 'POST'])
+def LR_result():
+    transaction = request.args.get('transaction')
+    url = str(request.args.get('url'))
+    header = str(request.args.get('header'))
+    body = str(request.args.get('body'))
+    passFail = str(request.args.get('passFail'))
+
+    prompt = '아래의 데이터로 LoadRunner로 부하를 발생시키는 Script를 작성해줘. transaction 이름: ' + transaction
+    prompt = prompt + ", 테스트 대상 URL :" + url
+    prompt = prompt + ", web_add_header로 다음의 헤더 정보를 추가해줘. " + header
+    prompt = prompt + ", web_custom_request로 다음의 Body 정보를 추가해줘. " + body
+    prompt = prompt + ", Transaction 성공 여부는 web_reg_find 명령어를 사용해줘. Transaction 종료는 LR_AUTO로 처리해줘."
+
+    return render_template('LR_result.html', prompt=prompt)
+
+
+@app.route('/get')
+def get_bot_response():
+    user_text = request.args.get('msg')
+
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {
+              "role": "system",
+                "content": "You are a helpful assistant."
+            },
+            {
+                "role": "user",
+                "content": "Im Bommi"
+            },
+            {
+                "role": "user",
+                "content": f"{user_text}"
+            }
+        ]
+    )
+    return str(response['choices'][0]['message']['content'])
 
 
 if __name__ == '__main__':

@@ -36,34 +36,46 @@
                 <form action="/LR_result">
                     <div align="left">
                         <label for="transaction"
-                        style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);text-align:left;">⚫TraTsactacon 명: </label>
+                        style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);text-align:left;">✔️TraTsactacon 명: </label>
                         <textarea name="transaction" type="text" id="transaction" name="transaction"
                         style="background:#FAFAD2; border-radius: 0.5em; align:left;
-                            padding: 0.5em; margin:1em; width:700px; height:20px">📝예시📝로그인</textarea><br>
+                            padding: 0.5em; margin:1em; width:700px; height:20px">Transaction_01 Login</textarea><br>
                             
                         <label for="url"
-                        style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);text-align:left;">⚫목표 URL명: </label>
-                        <input name="url" type="text" id="url" 
+                        style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);text-align:left;">✔️목표 URL명: </label>
+                        <textarea name="url" type="text" id="url" 
                         style="background:#FAFAD2; border-radius: 0.5em; align:left;
-                            padding: 0.5em; margin:1em; width:700px; height:20px"><br>
+                            padding: 0.5em; margin:1em; width:700px; height:20px">http://www.kt.com</textarea><br>
                         
-                        <label for="data"
-                        style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);align:left;">⚫데이터: </label>
-                        <textarea name="data" type="text" id="data"
+                        <label for="header"
+                        style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);align:left;">
+                        ✔️Header(method, protocol 등 헤더 정보 기입): </label>
+                        <textarea name="header" type="text" id="header"
                         style="background:#FAFAD2; border-radius: 0.5em; text-align:left;
-                            padding: 0.5em; margin:1em; width:700px; height:500px">
-                            📝예시📝
-                            - Content-type: text/plain
-                            - ApiKey: ***
+                            padding: 0.5em; margin:1em; width:700px; height:300px">
+                            - method: post
+                            - protocol: https
+                            - API key: consultingQApart_project
                             - tenant ID: kt
-                            - Method: post
-                            - Body: Hi Hello Nice to meet u</textarea><br>
+                            </textarea><br>
                         
-                        <label for="Pass"
-                        style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%); align:left;">⚫Transactiotion Pass s Fail 방법: </label>
-                        <textarea name="pass" type="text" id="pass"
+                        <label for="body"
+                        style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%);align:left;">
+                        ✔️Request Body(Content-type, Body 정보 기입): </label>
+                        <textarea name="body" type="text" id="body"
+                        style="background:#FAFAD2; border-radius: 0.5em; text-align:left;
+                            padding: 0.5em; margin:1em; width:700px; height:300px">
+                            - encoding type: application/json
+                            - Content-type: text/plain
+                            - Body: Hi Hello Nice to meet u</textarea><br>
+                            
+                            
+                        <label for="passFail"
+                        style="background: linear-gradient(to top, #FAFAD2 50%, transparent 50%); align:left;">
+                        ✔️Transactiotion Pass/Fail 기준(ex.web_reg_find): </label>
+                        <textarea name="passFail" type="text" id="passFail"
                         style="background:#FAFAD2; border-radius: 0.5em; align:left;
-                            padding: 0.5em; margin:1em; width:700px; height:50px">📝예시📝Header에서 http/1.1 200 ok 발견될 시 Pass 처리, 종료는 LR_AUTO로 처리</textarea><br>
+                            padding: 0.5em; margin:1em; width:700px; height:50px">Header에서 http/1.1 200 ok 발견될 시 Pass 처리, 종료는 LR_AUTO로 처리</textarea><br>
                             
                     </div>
                     

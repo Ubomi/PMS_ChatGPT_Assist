@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat With GPT-4</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <h1>Chat with GPT-4</h1>
+        <div id="chatbox">
+            <p class="botText"><span>Bot: </span>Hello! How can I assist you today?</p>
+        </div>
+        <div id="userInput">
+            <textarea id="textInput" type="text" name="msg" placeholder="Message">{{prompt}}</textarea>
+            <input id="buttonInput" type="submit" value="Send">
+        </div>
+        <script>
+            function getBotResponse() {
+                var rawText = $("#textInput").val();
+                var userHtml = '<p class="userText"><span>You: </span>' + rawText + '</p>';
+                $("#textInput").val("");
+                $("#chatbox").append(userHtml);
+                document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                $.get("/get", { msg: rawText }).done(function(data) {
+                  var botHtml = '<p class="botText"><span>Bot: </span>' + data + '</p>';
+                  $("#chatbox").append(botHtml);
+                  document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                });
+            }
+            $("#textInput").keypress(function(e) {
+                if(e.which == 13) {
+                    getBotResponse();
+                }
+            });
+            $("#buttonInput").click(function() {
+                getBotResponse();
+            })
+        </script>
+    </body>
+</html>
