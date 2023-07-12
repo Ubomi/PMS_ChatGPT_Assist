@@ -101,10 +101,6 @@ def get_bot_response():
             },
             {
                 "role": "user",
-                "content": "Im Bommi"
-            },
-            {
-                "role": "user",
                 "content": f"{user_text}"
             }
         ]

@@ -3,26 +3,43 @@
     <head>
         <title>Chat With GPT-4</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    </head>
+        
+        <!-- Font 추가 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Acme&family=Monomaniac+One&family=Patua+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+        </head>
+        
     <body>
-        <h1>Chat with GPT-4</h1>
+        <p data-ke-size="size30" style="text-align:center; font-size:30px;">
+            <span style=
+                "border-radius: 20px 15px 15px 0;
+                padding: 0.5em;
+                font-weight: bold;
+                font-family: 'Monomaniac One', sans-serif;">chatGPT's LoadRuuner Script</span></p>
+                
         <div id="chatbox">
-            <p class="botText"><span>Bot: </span>Hello! How can I assist you today?</p>
+            <p class="botText" style="background:#ADD8E6; border-radius: 0.5em; align:left;
+                            padding: 0.5em; margin:1em; width:1200px; height:20px">
+                            <span>🤖 Bot: </span >작성된 명령어를 전송해주세요.</p>
         </div>
         <div id="userInput">
-            <textarea id="textInput" type="text" name="msg" placeholder="Message">{{prompt}}</textarea>
-            <input id="buttonInput" type="submit" value="Send">
+            <textarea style="background:#FFEBCD; border-radius: 0.5em; align:left;
+                            padding: 0.5em; margin:1em; width:1200px; height:200px"
+                            id="textInput" type="text" name="msg" placeholder="Message">{{prompt}}</textarea>
+            <input id="buttonInput" type="submit" value="💌전송" style="background:#FA8072; border-radius: 0.5em; padding: 0.5em; margin:1em; font-family: 'Gamja Flower', cursive; font-size:20px;">
         </div>
+        
         <script>
             function getBotResponse() {
                 var rawText = $("#textInput").val();
-                var userHtml = '<p class="userText"><span>You: </span>' + rawText + '</p>';
+                var userHtml = '<p class="userText" style="background:#FFEBCD; border-radius: 0.5em; align:left; padding: 0.5em; margin:1em; width:1200px;"><span>🐵 You: </span>' + rawText + '</p>';
                 $("#textInput").val("");
                 $("#chatbox").append(userHtml);
                 document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
                 $.get("/get", { msg: rawText }).done(function(data) {
-                  var botHtml = '<p class="botText"><span>Bot: </span>' + data + '</p>';
+                  var botHtml = '<p class="botText"><textarea style="background:#ADD8E6; border-radius: 0.5em; align:left; padding: 0.5em; margin:1em; width:1200px; height:300px ">🤖 Bot: ' + data + '</textarea></p>';
                   $("#chatbox").append(botHtml);
                   document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
                 });
